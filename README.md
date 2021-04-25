@@ -1,8 +1,5 @@
 # Data115-Spring21-personal dataset project
--Motivation
--Data process
-Visualization
-Analysis
+
 
 One to two paragraph statement about your product and what it does.
 
