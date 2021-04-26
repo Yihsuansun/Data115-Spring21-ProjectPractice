@@ -6,7 +6,10 @@ One to two paragraph statement about your product and what it does.
 
 ## Motivation
 
-OS X & Linux:
+For this project, my original goal is to know "Is the graduation rate of high school really as high as we imagined."
+I have searched for many different data, including the SAT scores of high school students, the rate of college admissions in American high schools, etc. The original goal was to find the relationship between the SAT scores and the high school graduation rate, or the relationship between college admissions rate and the high school graduation rate. Unfortunately, the SAT scores only represent the academic level of the high school students, and this doesn't seem to have a significant connection with the graduation rate. As for the admission rate of American universities. This data seems to be more related to graduation rate than SAT scores, but there is a problem, what if a student successfully graduates from high school but does not plan to continue to university? This is also a question that I must think about if I want to use this data.
+
+In the end, I found the data "high school graduation rate of different groups of people." This is the data with a lot of information, and it seemed to answer my question. The high school graduation rate from 2013 to 2017 was not as high as we thought. This data also gave me another idea, the relationship between the graduation rate of various groups of people and the standard graduation rate. This data has shown the graduation rates of many groups of people. I selected several groups of people to analyze. So my final goal becomes finding the correlation between the graduation rate of different groups of people and the standard graduation rate. (Before the analysis begins, assume that there is a correlation, but the null hypothesis can be overturned)
 
 ```sh
 npm install my-crazy-module --save
