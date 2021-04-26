@@ -1,8 +1,10 @@
 # Data115-Spring21-personal dataset project
 
+This is a project on data analysis.
 
-One to two paragraph statement about your product and what it does.
-
+Washington state university
+Data 115
+personal dataset project
 
 ## Motivation
 
