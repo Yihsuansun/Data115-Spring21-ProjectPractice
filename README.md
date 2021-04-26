@@ -2,9 +2,7 @@
 
 This is a project on data analysis.
 
-Washington state university
-Data 115
-personal dataset project
+Washington state university----Data 115----personal dataset project
 
 ## Motivation
 
