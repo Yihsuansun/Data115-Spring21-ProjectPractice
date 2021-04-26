@@ -39,6 +39,18 @@ One of the code are shown below
 ```sh
 ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=White.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
 ```
+
+In the last part, I used regressions to find and plot the relationship between the graduation rate of each group and the average graduation rate. Among them, the white and Black or African American have a linear relationship with the average graduation rate.
+In this part, I use the lm() function to complete linear regression.
+
+one of the code are shown below
+```sh
+linearGR_AandW <- lm(All.Subgroups.Percentage.Graduated~White.Percentage.Graduated,GR_N)
+
+summary(linearGR_AandW)
+
+plot(GR_N$All.Subgroups.Percentage.Graduated~GR_N$White.Percentage.Graduated, col='blue')+abline(linearGR_AandW)
+```
 ## Visualization
 
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
