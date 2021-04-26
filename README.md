@@ -30,6 +30,15 @@ After processing the data, I created a new data frame according to the year. Fro
 
 <img width="523" alt="Screen Shot 2021-04-25 at 5 46 44 PM" src="https://user-images.githubusercontent.com/46459933/116015478-3f6f7280-a5ee-11eb-9cb0-57fb1d1305be.png">
 <img width="542" alt="Screen Shot 2021-04-25 at 5 46 50 PM" src="https://user-images.githubusercontent.com/46459933/116015490-472f1700-a5ee-11eb-9167-487481b933d8.png">
+
+
+I used scatterplots to show the relationship between various groups of people and the standard graduation rate. Set x as the total graduation rate of all groups, y as the graduation rate of a specific group, and use the year to represent the color. I have drawn many different graphs. These graphs can be used to present the distribution of individual group graduation rates and total graduation rates.
+
+
+One of the code are shown below
+```sh
+ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=White.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+```
 ## Visualization
 
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
