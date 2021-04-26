@@ -53,6 +53,9 @@ plot(GR_N$All.Subgroups.Percentage.Graduated~GR_N$White.Percentage.Graduated, co
 ```
 ## Visualization
 
+<img width="570" alt="Screen Shot 2021-04-25 at 6 19 27 PM" src="https://user-images.githubusercontent.com/46459933/116016878-d76f5b00-a5f2-11eb-8c48-fd590b55bd49.png">
+<img width="574" alt="Screen Shot 2021-04-25 at 6 19 37 PM" src="https://user-images.githubusercontent.com/46459933/116016885-de966900-a5f2-11eb-94dc-2b1610301b5e.png">
+
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
 
 ```sh
