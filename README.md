@@ -29,6 +29,9 @@ The first step of processing data is to start from importing data. Read "high-sc
 GR <- na.omit(GR_O) 
 ```
 
+After this, I checked again if other places need to make a change; the good thing is this data seems excellent, and no need to clean more, everything looks perfect. 
+
+hh
 ## Visualization
 
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
