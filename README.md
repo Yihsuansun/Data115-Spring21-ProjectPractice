@@ -11,15 +11,6 @@ I have searched for many different data, including the SAT scores of high school
 
 In the end, I found the data "high school graduation rate of different groups of people." This is the data with a lot of information, and it seemed to answer my question. The high school graduation rate from 2013 to 2017 was not as high as we thought. This data also gave me another idea, the relationship between the graduation rate of various groups of people and the standard graduation rate. This data has shown the graduation rates of many groups of people. I selected several groups of people to analyze. So my final goal becomes finding the correlation between the graduation rate of different groups of people and the standard graduation rate. (Before the analysis begins, assume that there is a correlation, but the null hypothesis can be overturned)
 
-```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
-```
 
 ## Data process
 
