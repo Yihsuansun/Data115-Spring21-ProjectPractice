@@ -1,0 +1,159 @@
+---
+title: "Untitled"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+GR_O <- read.csv("high-school-graduation-rates.csv")
+nrow(GR_O)
+GR <- na.omit(GR_O)   
+nrow(GR)
+head(GR)
+ncol(GR)
+
+GR_N <- GR[ which(GR$Year..end.year.of.academic.year.=='2012' |  GR$Year..end.year.of.academic.year.=='2013' | GR$Year..end.year.of.academic.year.=='2014' | GR$Year..end.year.of.academic.year.=='2015' | GR$Year..end.year.of.academic.year.=='2016' |GR$Year..end.year.of.academic.year.=='2017'
+& GR$All.Subgroups.Number.in.Cohort < 5000), ]
+tail(GR_N)
+head(GR_N)
+```
+```{r}
+# Divide the original data frame into a new data frame by year
+
+GR_2012 <- GR[ which(GR$Year..end.year.of.academic.year.=='2012'
+& GR$All.Subgroups.Number.in.Cohort < 5000), ]
+tail(GR_2012)
+
+
+GR_2013 <- GR[ which(GR$Year..end.year.of.academic.year.=='2013'
+& GR$All.Subgroups.Number.in.Cohort < 5000), ]
+tail(GR_2013)
+
+
+GR_2014 <- GR[ which(GR$Year..end.year.of.academic.year.=='2014'
+& GR$All.Subgroups.Number.in.Cohort < 5000), ]
+tail(GR_2014)
+
+
+GR_2015 <- GR[ which(GR$Year..end.year.of.academic.year.=='2015'
+& GR$All.Subgroups.Number.in.Cohort < 5000), ]
+tail(GR_2015)
+
+
+GR_2016 <- GR[ which(GR$Year..end.year.of.academic.year.=='2016'
+& GR$All.Subgroups.Number.in.Cohort < 5000), ]
+tail(GR_2016)
+
+
+GR_2017 <- GR[ which(GR$Year..end.year.of.academic.year.=='2017'
+& GR$All.Subgroups.Number.in.Cohort < 5000), ]
+tail(GR_2017)
+
+
+
+# In this part, we have GR_2012, GR_2013, GR_2014, GR_2015, GR_2016, GR_2017
+```
+```{r}
+library("tidyverse")
+
+#compare the graduation rate between male and female each year, using boxplot amd scatterplot
+
+boxplot(GR_2012$Female.Graduated)
+boxplot(GR_2012$Male.Graduated)
+
+boxplot(GR_2013$Female.Graduated)
+boxplot(GR_2013$Male.Graduated)
+
+boxplot(GR_2017$Female.Graduated)
+boxplot(GR_2017$Male.Graduated)
+
+ggplot(data = GR_N, mapping = aes(x=Female.Graduated, y=Male.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+
+```
+```{r}
+#making scatterplot matrix, I didn't seem any associate
+
+GR_1 <- GR_N[,1:10]
+plot(GR_1,pch=20, cex=1.5,col="#69b3a2")
+
+GR_2 <- GR_N[,11:20]
+plot(GR_2,pch=20, cex=1.5,col="#69b3a2")
+
+GR_3 <- GR_N[,21:30]
+plot(GR_3,pch=20, cex=1.5,col="#69b3a2")
+
+GR_4 <- GR_N[,31:40]
+plot(GR_4,pch=20, cex=1.5,col="#69b3a2")
+```
+```{r}
+hist(GR_N$All.Subgroups.Percentage.Graduated,main = "Height")
+
+ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=White.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+
+ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=Male.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+
+ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=Female.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+
+ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=Black.or.African.American.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+
+ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=Asian.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+
+ggplot(data = GR_N, mapping = aes(x=All.Subgroups.Percentage.Graduated, y=American.Indian.or.Alaska.Native.Percentage.Graduated, color = Year..end.year.of.academic.year. )) + geom_point()
+```
+```{r}
+ggplot(GR_N,aes(x = All.Subgroups.Percentage.Graduated, y = White.Percentage.Graduated))+geom_point(color = 'blue')
+
+
+#white
+linearGR_AandW <- lm(All.Subgroups.Percentage.Graduated~White.Percentage.Graduated,GR_N)
+
+summary(linearGR_AandW)
+
+plot(GR_N$All.Subgroups.Percentage.Graduated~GR_N$White.Percentage.Graduated, col='blue')+abline(linearGR_AandW)
+
+#Black
+linearGR_AandB <- lm(All.Subgroups.Percentage.Graduated~Black.or.African.American.Percentage.Graduated,GR_N)
+
+summary(linearGR_AandB)
+
+plot(GR_N$All.Subgroups.Percentage.Graduated~GR_N$Black.or.African.American.Percentage.Graduated, col='blue')+abline(linearGR_AandB)
+
+#Asian
+
+linearGR_AandA <- lm(All.Subgroups.Percentage.Graduated~Asian.Percentage.Graduated,GR_N)
+
+summary(linearGR_AandA)
+
+plot(GR_N$All.Subgroups.Percentage.Graduated~GR_N$Asian.Percentage.Graduated, col='blue')+abline(linearGR_AandA)
+
+#I
+linearGR_AandI <- lm(All.Subgroups.Percentage.Graduated~American.Indian.or.Alaska.Native.Percentage.Graduated,GR_N)
+
+summary(linearGR_AandI)
+
+plot(GR_N$All.Subgroups.Percentage.Graduated~GR_N$American.Indian.or.Alaska.Native.Percentage.Graduated, col='blue')+abline(linearGR_AandI)
+```
+
