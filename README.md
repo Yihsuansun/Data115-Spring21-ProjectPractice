@@ -62,32 +62,4 @@ The above two graphs are the two conclusions. The graduation rate of whites and 
 
 ## Analysis
 
-* 0.2.1
-   * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
-
-## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
+I used several skills learned in the DATA115 class to analyze. First, draw several boxplots to represent the Males and Females graduation rate each year. From the boxplot, we can find that the number of graduation rates from 2012 to 2017  continues to increase, and by comparing the distance between the mean and lower quartile from 2012 to 2017, we can conclude that high schools' graduation rate with low graduation rates is also rising rapidly. In this report, I use scatterplots to show the relationship between the graduation rate of each group and the average graduation rate, where the color represents different years. From the graph, we can see that there should be a linear relationship between the graduation rates of whites and African Americans and the average graduation rates. Finally, we use the lm() function to confirm the conclusion of the previous step. There is a linear relationship between them, and their linear equations are y=-2.70594+1.00268x and y=0.35055+1.02969x. The final conclusion is that the graduation rates of whites and African Americans have a linear relationship with the average graduation rate; The graduation rate of other groups doesn't seem to have any connection with average graduation rates, the relatively small number of people may cause it.
