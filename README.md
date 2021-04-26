@@ -23,9 +23,11 @@ edit autoexec.bat
 
 ## Data process
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+The first step of processing data is to start from importing data. Read "high-school-graduation-rates.csv" into the R file and name it. Before starting all the analysis, the most important step is to clean the data. There are lots of missing data in this data, and my purpose is to remove those rows that contain missing data. This step is very easy and can be done with na.omit() function.
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+```sh
+GR <- na.omit(GR_O) 
+```
 
 ## Visualization
 
