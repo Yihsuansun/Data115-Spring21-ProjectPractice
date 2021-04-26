@@ -31,7 +31,7 @@ GR <- na.omit(GR_O)
 
 After this, I checked again if other places need to make a change; the good thing is this data seems excellent, and no need to clean more, everything looks perfect. 
 
-hh
+Before starting the next steps, I have to change some ranges of this data. I don’t want my chart to become weird because of some big numbers. So I created a new data which only include the high school with less than 5000 people. 
 ## Visualization
 
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
