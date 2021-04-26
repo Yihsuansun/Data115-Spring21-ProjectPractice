@@ -34,6 +34,11 @@ After this, I checked again if other places need to make a change; the good thin
 Before starting the next steps, I have to change some ranges of this data. I don’t want my chart to become weird because of some big numbers. So I created a new data which only include the high school with less than 5000 people. 
 ## Visualization
 
+After processing the data, I created a new data frame according to the year. From 2012 to 2017, even though we can see from the data that the graduation rate continues to increase with the year, I still want to use boxplots to show more clearly conclusion. From the boxplot I made, I found something more interesting. Even though our graduation rate has risen, the real change is actually the distribution of the graduation rate. From comparing the charts in 2012 and 2017, we can find that the Mean has become closer to the lower quartile, which means that high schools' graduation rate with low graduation rates is also rising rapidly. Most high schools have higher graduation rates than before.
+<img width="523" alt="Screen Shot 2021-04-25 at 5 46 44 PM" src="https://user-images.githubusercontent.com/46459933/116015478-3f6f7280-a5ee-11eb-9cb0-57fb1d1305be.png">
+<img width="542" alt="Screen Shot 2021-04-25 at 5 46 50 PM" src="https://user-images.githubusercontent.com/46459933/116015490-472f1700-a5ee-11eb-9167-487481b933d8.png">
+
+
 Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
 
 ```sh
